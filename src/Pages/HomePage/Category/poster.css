@@ -1,0 +1,21 @@
+.swiperbg {
+    background-image: url(../../../assets/home/pattern-9.svg);
+    /* background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; */
+
+
+}
+
+
+
+.bgid {
+    background-image: url(../../../assets/home/pattern-9.svg);
+}
+
+
+.poster {
+    background-image: linear-gradient(90deg, rgba(0, 0, 0, .4), rgba(9, 26, 24, .85)), url(../../../assets/home/chef-service.jpg);
+}
+
+/* rgb(228, 197, 144) */

@@ -1,0 +1,8 @@
+.react-tabs__tab {
+    background-color: rgba(169, 169, 169, 0.123);
+}
+
+.react-tabs__tab--selected {
+    background-color: burlywood;
+    font-weight: bold;
+}

@@ -1,5 +1,5 @@
 
-import Xyz from '../../Xyz';
+// import Xyz from '../../Xyz';
 import Banner from '../Banner/Banner';
 import Category from '../Category/Category';
 import FromOurMenu from '../FromOurMenu/FromOurMenu';
@@ -24,9 +24,7 @@ const Home = () => {
                 <FromOurMenu></FromOurMenu>
                 <Category></Category>
                 <Testimonials></Testimonials>
-                <Xyz></Xyz>
-
-
+                {/* <Xyz></Xyz> */}
 
             </div>
 

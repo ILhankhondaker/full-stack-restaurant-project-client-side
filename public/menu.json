@@ -486,5 +486,13 @@
         "image": "../public/jsonAssets/chicken.png",
         "category": "bestMenu",
         "price": 199
+    },
+    {
+        "_id": "a15",
+        "name": "Cheeseburger",
+        "recipe": "Warm goats cheese and roasted vegetable salad with black olive tapenade crostini",
+        "image": "../public/jsonAssets/burger.png",
+        "category": "bestMenu",
+        "price": 35
     }
 ]

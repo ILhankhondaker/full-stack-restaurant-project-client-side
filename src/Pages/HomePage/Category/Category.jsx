@@ -35,7 +35,7 @@ const Category = () => {
 
     return (
 
-        <div className="my-20">
+        <div className="my-20 ">
 
             {/* text item  */}
             <Title subheading={"From 11:00am to 10:00pm"} heading={"Order Online"}></Title>

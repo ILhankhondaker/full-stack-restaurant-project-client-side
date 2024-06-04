@@ -11,6 +11,8 @@ import Contact from "../Pages/Contact/Contact";
 
 
 export const router = createBrowserRouter([
+
+
     {
         path: "/",
         element: <Main></Main>,
@@ -31,8 +33,8 @@ export const router = createBrowserRouter([
                 element: <Contact></Contact>
             },
             {
-                path: "/menu",
-                element: <Menu></Menu>
+                path: "menu",
+                element: <Menu> </Menu>
             }
         ]
     },

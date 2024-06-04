@@ -24,17 +24,25 @@ const Footer = () => {
                     <a className="link link-hover">Cookie policy</a>
                 </div>
                 <div>
-                    <span className="footer-title">Newsletter</span>
+                    <span className="footer-title ">Newsletter</span>
                     <div className="form-control w-80">
                         <label className="label">
-                            <span className="label-text">Enter your email address</span>
+                            <span className="label-text text-[#e4c590]">Enter your email address</span>
                         </label>
                         <div className="relative">
-                            <input type="text" placeholder="username@site.com" className="input input-bordered w-full pr-16" />
-                            <button className="btn btn-primary absolute top-0 right-0 rounded-l-none">Subscribe</button>
+                            <input type="text" placeholder="username@site.com" className="input input-bordered w-full pr-16 " />
+                            <button className="btn btn-primary text-black bg-[#f8b239] hover:bg-[#d89d36] absolute top-0 right-0 rounded-l-none">Subscribe</button>
                         </div>
                     </div>
                 </div>
+
+            </footer>
+
+
+            <footer className="footer footer-center p-4   bg-neutral-900   text-[#e4c590] ">
+                <aside>
+                    <p>Copyright © 2024 - All right reserved by <a className="font-bold" href="https://ilhan-khondaker.netlify.app" target="_blank" rel="noopener noreferrer"> Ilhan Khondaker</a> </p>
+                </aside>
             </footer>
         </div>
     );

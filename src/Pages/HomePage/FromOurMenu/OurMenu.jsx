@@ -2,20 +2,20 @@
 
 const OurMenu = ({ item }) => {
 
-    const { image, name, price, recipe } = item;
+    const { image, name, price } = item;
     return (
         <div className="">
-            {/* <div className="flex my-10 mx-5">
+            <div className="flex my-10 mx-5">
                 <img className="mr-5" src={image} alt="" />
                 <h1 className="text-xl lg:text-3xl ">{name}</h1>
                 <h1></h1>
-                <h1 className="badge badge-ghost font-bold lg:text-xl ">$ {price}</h1>
-            </div> */}
+                <h1 className="badge badge-ghost font-bold lg:text-xl ml-5">$ {price}</h1>
+            </div>
 
 
             {/* another menu item  */}
 
-            <div className="">
+            {/* <div className="">
 
                 <div className="card w-96 bg-neutral-900 shadow-xl ">
                     <figure><img className="p-3 rounded-3xl" src={image} alt="Shoes" /></figure>
@@ -32,7 +32,7 @@ const OurMenu = ({ item }) => {
                     </div>
                 </div>
 
-            </div>
+            </div> */}
 
 
         </div>

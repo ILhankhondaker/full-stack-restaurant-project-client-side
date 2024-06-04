@@ -13,7 +13,7 @@ import { Link } from 'react-router-dom';
 
 const TabMenu = () => {
     return (
-        <div className='h-[500px] my-20'>
+        <div className='h-[800px] lg:h-[500px] my-20  '>
 
             <Title
                 subheading="What you Like in"
@@ -53,7 +53,7 @@ const TabMenu = () => {
 
                     {/* 1 */}
                     <TabPanel>
-                        <div className=" hero bg-stone-950">
+                        <div className=" hero bg-stone-950 ">
                             <div className="hero-content flex-col lg:flex-row">
                                 <img src="https://cosmosgroup.sgp1.digitaloceanspaces.com/news/details/9796372_Fried%20Grilled%20Rupchanda%20Fish.jpg" className="max-w-sm rounded-lg shadow-2xl w-80 h-40" />
                                 <div>

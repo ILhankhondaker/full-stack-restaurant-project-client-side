@@ -1,64 +1,88 @@
-import { useState, useEffect } from 'react';
-import ItemCard from './Shared/ItemCard/ItemCard';
-
+import { useEffect, useState } from "react";
+import {
+  LoadCanvasTemplate,
+  loadCaptchaEnginge,
+  validateCaptcha,
+} from "react-simple-captcha";
 
 const Xyz = () => {
+  const [disabled, setDisabled] = useState(true);
+  useEffect(() => {
+    loadCaptchaEnginge(5);
+  }, []);
 
-    const [data, setData] = useState([]);
-    const [visibleItems, setVisibleItems] = useState(3); // Initial number of items to display
+  const handleLogin = (event) => {
+    event.preventDefault();
+    const form = event.target;
+    const email = form.email.value;
+    const password = form.password.value;
+    console.log(email, password);
+  };
 
-    useEffect(() => {
-        // Simulated API call to load initial data
-        fetch('menu.json')
-            .then(response => response.json())
-            .then(data => setData(data))
-            .catch(error => console.error('Error loading data:', error));
-    }, []); // The empty dependency array ensures the effect runs once when the component mounts
-
-    const loadMore = () => {
-        // Increase the number of visible items by, for example, 3
-        setVisibleItems(prevVisibleItems => prevVisibleItems + 3);
-    };
-
-    return (
-
-
-
-        <div className="mt-10 ">
-            <h1 className='text-center text-5xl '>This is practice component </h1>
-
-
-            <div>
-                <h1>Load More Example</h1>
-                <div className="grid grid-cols-3 gap-4 m-2 ">
-
-
-                    {/* {data.slice(0, visibleItems).map((item, index) => (
-                        <div key={index}>
-                            <strong>{item.name}</strong>: {item.description}
-                        </div>
-                    ))} */}
-
-
-                    {data.slice(0, visibleItems).map(
-                        (item) => (<ItemCard
-                            key={item._id}
-                            item={item}
-                        ></ItemCard>)
-                    )
-                    }
-
-
-                </div>
-                {visibleItems < data.length && (
-                    <button onClick={loadMore}>Show More</button>
-                )}
-                <button>ok</button>
-            </div>
-
-
-        </div>
-    );
+  const handleValidateCaptcha = (e) => {
+    const user_captcha_value = e.target.value;
+    if (validateCaptcha(user_captcha_value)) {
+      setDisabled(false);
+    } else {
+      setDisabled(true);
+    }
+  };
+  return (
+    <div className="min-h-screen  hero ">
+      <div className="card md:w-1/2 max-w-sm shadow-2xl bg-base-100">
+        <form onSubmit={handleLogin} className="card-body">
+          <div className="form-control">
+            <label className="label">
+              <span className="label-text">Email</span>
+            </label>
+            <input
+              type="email"
+              name="email"
+              placeholder="email"
+              className="input input-bordered"
+            />
+          </div>
+          <div className="form-control">
+            <label className="label">
+              <span className="label-text">Password</span>
+            </label>
+            <input
+              type="password"
+              name="password"
+              placeholder="password"
+              className="input input-bordered"
+            />
+            <label className="label">
+              <a href="#" className="label-text-alt link link-hover">
+                Forgot password?
+              </a>
+            </label>
+          </div>
+          <div className="form-control">
+            <label className="label">
+              <LoadCanvasTemplate />
+            </label>
+            <input
+              onBlur={handleValidateCaptcha}
+              type="text"
+              name="captcha"
+              placeholder="type the captcha above"
+              className="input input-bordered"
+            />
+          </div>
+          <div className="form-control mt-6">
+            {/* TODO: apply disabled for re captcha */}
+            <input
+              disabled={disabled}
+              className="btn "
+              type="submit"
+              value="Login"
+            />
+          </div>
+        </form>
+      </div>
+    </div>
+  );
 };
 
 export default Xyz;
